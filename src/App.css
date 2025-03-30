@@ -1,0 +1,164 @@
+/* Import Poppins Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+/* General Styles */
+body {
+  background: #f5f5f8;
+  color: #0e0d0d;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  font-weight: 600;
+}
+
+/* Chatbot Container */
+.chatbot_container {
+  width: 1000px;
+  height: 80vh;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  background: #FFFFFF;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+.chatbot_response_container {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* Reduces excessive space between elements */
+  background: #FFF;
+  border-radius: 10px;
+  border: 2px solid #1b1c1a;
+  scroll-behavior: smooth;
+  max-width: 100%;
+ 
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.response {
+  max-width: 100%;
+  word-break: normal;
+  line-height: 1.4; /* Adjusts spacing for better readability */
+  white-space: normal; /* Ensures normal wrapping */
+}
+
+.response ul {
+  padding-left: 20px; /* Proper indentation for points */
+}
+
+.response ul li {
+  margin-bottom: 5px; /* Reduces excessive space between bullet points */
+  list-style-type: disc; /* Ensures bullet points are visible */
+}
+
+
+/* Messages */
+.response {
+  max-width: 75%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 16px;
+  line-height: 1.5;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chatbot_prompt {
+  align-self: flex-end;
+  background: #dad0ef;
+  border-radius: 5px 5px 1px 5px;
+  text-align: right;
+}
+
+.chatbot_response {
+  align-self: flex-start;
+  background: #f0f0f0;
+  border-radius: 5px 5px 1px 5px;
+  text-align: left;
+}
+
+/* Loading Animation */
+.loading {
+  align-self: center;
+  font-size: 14px;
+  color: #555;
+  font-style: italic;
+}
+
+/* Input & Button */
+.chatbot_input {
+  display: flex;
+  gap: 12px;
+  padding: 10px;
+}
+
+.input {
+  flex: 1;
+  padding: 12px;
+  border: 2px solid #dad0ef;
+  border-radius: 8px;
+  font-size: 16px;
+  background: #dad0ef;
+  color: #0c0b0b;
+  transition: border 0.3s ease-in-out;
+}
+
+
+/* Placeholder Styling */
+input::placeholder, textarea::placeholder {
+  color: #0a090a;
+}
+
+/* Button */
+button {
+  padding: 12px 18px;
+  border-radius: 8px;
+  color: rgb(8, 8, 8);
+  cursor: pointer;
+  border: none;
+  font-size: 16px;
+  background: #dad0ef;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background: #b8a4e6;
+}
+
+button:disabled {
+  background: #f3efef;
+  cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media (max-width: 800px) {
+  .chatbot_container {
+    width: 90%;
+    height: 85vh;
+  }
+  .chatbot_response_container {
+    padding: 10px;
+  }
+  .input {
+    font-size: 14px; 
+    padding: 10px;
+  }
+  button {
+    font-size: 14px;
+  }
+}
