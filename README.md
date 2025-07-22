@@ -1,4 +1,4 @@
-# Gemino AI Chatbot
+# Gemino
 
 An AI-powered chatbot built using "React.js (Vite)" and "Google Gemini AI" for real-time intelligent responses. It features a responsive UI, fast performance, and easy customization.
 
